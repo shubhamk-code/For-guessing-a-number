@@ -1,0 +1,21 @@
+n =87
+#choose your required number
+c= 5
+# choose your chances
+while(c!=0):
+    inp = int(input("\nEnter your guess "))
+    if inp == n:
+        print("Your guess is correct and remaining guesses were",c-1)
+        break
+    elif inp < n and c>= 0:
+        print("Increase your number")
+        c = c-1
+        print("Chances left are \t", c )
+        continue
+    else:
+        print("Decrease your number")
+        c = c-1
+        print("Chances left are\t", c )
+        continue
+print("Game Over")
+print("The correct guess was",n)
